@@ -1,46 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Post Instagram-like</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Gonna Lie - Post</title>
 
-<div class="post">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- MEDIA -->
-  <div class="media">
-    <img src="video-thumb.jpg" alt="Post media">
-  </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- ACTIONS -->
-  <div class="actions">
-    <button id="likeBtn">🤍</button>
-    <button id="commentBtn">💬</button>
-    <span id="likeCount">349 500</span> likes
-  </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="header">
+        <div class="logo">I Gonna Lie</div>
+        <div class="header-icons">
+          <i class="fa-solid fa-magnifying-glass icon"></i>
+          <i class="fa-solid fa-user icon"></i>
+        </div>
+      </header>
 
-</div>
+      <main class="post">
+        <div class="post-header">
+          <div class="avatar"></div>
+          <span class="username">@itsu_nakano</span>
+        </div>
 
-<!-- COMMENTS PANEL -->
-<div class="comments-panel hidden" id="commentsPanel">
-  <div class="comments-header">
-    <span>Commentaires</span>
-    <button id="closeComments">✖</button>
-  </div>
+        <div class="media">
+          <img
+            id="post-image"
+            src="Icon - Bocchi.jpeg"
+            alt="Flexibilité pose"
+          />
+        </div>
 
-  <div class="comments">
-    <p><strong>user1</strong> Omg 🔥🔥</p>
-    <p><strong>user2</strong> Speechless 👏</p>
-  </div>
+        <div class="actions">
+          <button class="action-btn like-btn" aria-label="Like">
+            <i class="fa-solid fa-heart heart"></i>
+            <span class="like-count" id="like-count">342</span>
+          </button>
+          <button class="action-btn comment-btn" aria-label="Commenter">
+            <i class="fa-regular fa-comment-dots"></i>
+          </button>
+          <button class="action-btn share-btn" aria-label="Partager">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <button class="action-btn save-btn" aria-label="Enregistrer">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
 
-  <div class="comment-input">
-    <input type="text" placeholder="Ajouter un commentaire…" />
-    <button>Publier</button>
-  </div>
-</div>
+        <div class="post-info">
+          <p class="caption">
+            Bochi Bochi Bochi<strong>#loremipsum</strong> 🔥
+          </p>
+          <p class="music">Musique • @justintimberlake</p>
+        </div>
+      </main>
 
-<script src="script.js"></script>
-</body>
+      <!-- Zone de saisie commentaire (cachée au départ) -->
+      <section class="comment-input-container" id="comment-input-container">
+        <div class="comment-input-wrapper">
+          <input
+            type="text"
+            id="comment-input"
+            placeholder="Ajoute un commentaire..."
+            autocomplete="off"
+          />
+          <button id="send-comment">Envoyer</button>
+        </div>
+      </section>
+
+      <!-- Liste des commentaires -->
+      <section class="comments" id="comments-list">
+        <div class="comment">
+          <span class="comment-username">diewalsers.official</span>
+          Omggg WOOOOW <i class="fa-solid fa-fire"></i>
+        </div>
+        <div class="comment">
+          <span class="comment-username">sonamchatterjee</span>
+          Speechless <i class="fa-solid fa-fire"></i
+          ><i class="fa-solid fa-heart"></i>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <i class="fa-solid fa-house nav-icon"></i>
+        <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+        <i class="fa-solid fa-square-plus nav-icon plus"></i>
+        <i class="fa-solid fa-bell nav-icon"></i>
+        <i class="fa-solid fa-user nav-icon"></i>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
