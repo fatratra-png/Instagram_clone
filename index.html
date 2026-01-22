@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Post Instagram-like</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="post">
+
+  <!-- MEDIA -->
+  <div class="media">
+    <img src="video-thumb.jpg" alt="Post media">
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="actions">
+    <button id="likeBtn">🤍</button>
+    <button id="commentBtn">💬</button>
+    <span id="likeCount">349 500</span> likes
+  </div>
+
+</div>
+
+<!-- COMMENTS PANEL -->
+<div class="comments-panel hidden" id="commentsPanel">
+  <div class="comments-header">
+    <span>Commentaires</span>
+    <button id="closeComments">✖</button>
+  </div>
+
+  <div class="comments">
+    <p><strong>user1</strong> Omg 🔥🔥</p>
+    <p><strong>user2</strong> Speechless 👏</p>
+  </div>
+
+  <div class="comment-input">
+    <input type="text" placeholder="Ajouter un commentaire…" />
+    <button>Publier</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
